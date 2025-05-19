@@ -41,17 +41,22 @@ def add_prod(data):
     print("Produkta cena veiksmīgi pievienota!").
 
 #Produktu izvade tabulas formātā
+def view_all(data)
 
 #Produkta cenu limita uzstādīšana, un cenas paaugstināšanās brīdinājums
+def price_alert(data) 
 
 #Eksportē datus uz Excel
+def export_to_excel(data)
 
 #Importē datus no Excel
+def import_from_excel(data)
 
 #Produktu statistikas
+def statistic_data(data)
 
 #Cenu tabula
-
+def price_chart(data)
 
 
 #Izdzēst produktu
@@ -68,14 +73,6 @@ def delete_product(data):
         else:
             print("Produkts netika atrasts datu bāzē.")
 
-
-def view_all(data)
-def price_alert(data) 
-def export_to_excel(data)
-def import_from_excel(data)
-def statistic_data(data)
-def price_chart(data)
-def delete_product(data)
 
 #Atgādinājums par produktu reģistrēšanu sistēmā
 ##### uzrakstīt kodu
