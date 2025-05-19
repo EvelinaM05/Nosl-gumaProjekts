@@ -41,22 +41,31 @@ def add_prod(data):
     print("Produkta cena veiksmīgi pievienota!").
 
 #Produktu izvade tabulas formātā
-def view_all(data)
+def view_all(data):
+    if not data:
+        print("Dati netika atrasti.")
+        return
+
+    table = []
+    for product, entries in data.items():
+        latest = max(entrues, key=lambada x: x["date"])
+        table.append([product.title(), latest["price"], latest["date"]])
+    print(tabulate(table, headers=["Produkts", "Cena(€), Datums"], tablefmt="grid"))
 
 #Produkta cenu limita uzstādīšana, un cenas paaugstināšanās brīdinājums
-def price_alert(data) 
+def price_alert(data):
 
 #Eksportē datus uz Excel
-def export_to_excel(data)
+def export_to_excel(data):
 
 #Importē datus no Excel
-def import_from_excel(data)
+def import_from_excel(data):
 
 #Produktu statistikas
-def statistic_data(data)
+def statistic_data(data):
 
 #Cenu tabula
-def price_chart(data)
+def price_chart(data):
 
 
 #Izdzēst produktu
@@ -75,7 +84,10 @@ def delete_product(data):
 
 
 #Atgādinājums par produktu reģistrēšanu sistēmā
-##### uzrakstīt kodu
+def set_reminder():
+    def reminder():
+        print("Atgādinājums - Pievienojiet produktu cenas ")
+    set.every().day.at("18:30").do(reminder)
 
 #Main loop
 def main_menu():
