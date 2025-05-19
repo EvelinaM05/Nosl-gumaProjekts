@@ -2,6 +2,10 @@ import json
 import os
 import datatime
 import time
+import schedule
+import pandas as pandas
+import matplotlib.pyplot as plt
+from tabulate import tabulate
 
 DATA_FILE = "products_data.json"
 
@@ -34,7 +38,21 @@ def add_prod(data):
         data[product] = []
     data[product].append(entry)
     save data(data)
-    print("Produkta cena veiksmīgi pievienota!")
+    print("Produkta cena veiksmīgi pievienota!").
+
+#Produktu izvade tabulas formātā
+
+#Produkta cenu limita uzstādīšana, un cenas paaugstināšanās brīdinājums
+
+#Eksportē datus uz Excel
+
+#Importē datus no Excel
+
+#Produktu statistikas
+
+#Cenu tabula
+
+
 
 #Izdzēst produktu
 def delete_product(data):
@@ -59,11 +77,13 @@ def statistic_data(data)
 def price_chart(data)
 def delete_product(data)
 
+#Atgādinājums par produktu reģistrēšanu sistēmā
+##### uzrakstīt kodu
 
 #Main loop
 def main_menu():
     data = load_data()
-    reminder()
+    set_reminder()
 
     while True:
         print("\n---Pārtikas produktu cenu uzskaites sistēma ---")
