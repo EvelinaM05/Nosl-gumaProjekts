@@ -1,7 +1,43 @@
+import json
+import os
+import datatime
+import time
+
+DATA_FILE = "products_data.json"
+
+#Lādējam datus no JSON faila
+def load_data():
+    if not os.path.exists(DATA_FILE):
+        return{}
+    with open(DATA_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+#Saglabājam produkta datus json failā
+def saving_data(data):
+    with open(DATA_FILE, "w", encoding"utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+#Pievienojam jaunu produktu
+def add_prod(data):
+    product = input("Produkta nosaukums: ").strip().lower()
+    try:
+        price = float(input("Cena (€): ").strip())
+    except ValueError:
+        print("Nepareiza cenas ievade(ievadiet kā 0.00)")
+        return
+    
+    entry = {
+        "price": price,
+        "date": datatime.datatime.now().strftime("%Y-%m-%d")
+    }
+    if product not in data:
+        data[product] = []
+    data[product].append(entry)
+    save data(data)
+    print("Produkta cena veiksmīgi pievienota!")
 
 
 
-def add_prod(data)
 def view_all(data)
 def price_alert(data) 
 def export_to_excel(data)
