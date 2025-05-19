@@ -36,6 +36,19 @@ def add_prod(data):
     save data(data)
     print("Produkta cena veiksmīgi pievienota!")
 
+#Izdzēst produktu
+def delete_product(data):
+    product = input("Ievadiet produkta nosaukumu, lai to izdzēstu: ")
+    if product in data:
+        confirm = input(f"Vai tiešām vēlaties dzēst produktu '{product.title()}'") no uzskaites sistēmas? (jā/nē):.strip().lower()
+        if confirm == "jā":
+            del data[product]
+            ssaving_data(data)
+            print(f"Produkts '{product.title()}' tika izdzēsts.")
+            else:
+                print("Darbība tika atcelta. ")
+        else:
+            print("Produkts netika atrasts datu bāzē.")
 
 
 def view_all(data)
