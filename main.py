@@ -83,6 +83,21 @@ def export_to_excel(data):
 
 #Importē datus no Excel
 def import_from_excel(data):
+    try:
+        df = pd.read_excel("products.xlsx")
+        for _, row in df.iterrows():
+            product = str(row["Produkts"]).strip().lower()
+            price = float(row["Cena (€)"])
+            date = str(row["Datums"])[:10]
+
+            entry = {"price": price, "date": date}
+            if product not in data:
+                data[product] = []
+            data[product].append(entry)
+        save_data(data)
+        print("Dati importēti no 'products.xlsx'.")
+    except Exception as e:
+        print(f"Importēšanas kļūda: {e}")
 
 #Produktu statistika
 def statistic_data(data):
