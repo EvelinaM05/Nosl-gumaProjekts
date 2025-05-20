@@ -97,6 +97,16 @@ def main_menu():
             add_prod(data)
         elif choice == "2":
             view_all(data)
+        elif choice == "3":
+            set_price_alert(data)
+        elif choice == "4":
+            export_to_excel(data)
+        elif choice == "5":
+            import_from_excel(data)
+        elif choice == "6":
+            statistics(data)
+        elif choice == "7":
+            price_chart(data)
         elif choice == "8":
             print("Programma beidzas.")
             break
