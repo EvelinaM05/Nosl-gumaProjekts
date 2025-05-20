@@ -142,7 +142,7 @@ def statistics(data):
         print("Produkts nav atrasts vai nav ierakstu!")
 
 #Cenu tabula
-def price_char(data):
+def price_chart(data):
     product = input("Produkta nosaukums: ").strip().lower()
     if product in data and data[product]:
         entries = sorted(data[product], key=lambda x: x["date"])
