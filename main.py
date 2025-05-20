@@ -100,7 +100,16 @@ def import_from_excel(data):
         print(f"Importēšanas kļūda: {e}")
 
 #Produktu statistika
-def statistic_data(data):
+def statistics(data):
+    product = input("Produkta nosaukums: ").strip().lower()
+    if product in data and data[product]:
+        prices = [entry["price"] for entry in data[product]]
+        print(f"\nStatistika par {product.title()}:")
+        print(f"  Minimālā cena: {min(prices)}€")
+        print(f"  Maksimālā cena: {max(prices)}€")
+        print(f"  Vidējā cena: {sum(prices)/len(prices):.2f}€")
+    else:
+        print("Produkts nav atrasts vai nav ierakstu!")
 
 #Cenu tabula
 def price_char(data):
