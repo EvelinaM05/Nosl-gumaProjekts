@@ -1,9 +1,10 @@
 # Noslēguma Projekts "Pārtikas cenu uzskaites sistēma"
-***Projekta mērķis*** 
+
+### Projekta mērķis ###
 
 Šī projekta mērķis ir izveidot viegli saprotamu rīku, kas palīdz lietotājam sekot līdzi pārtikas produktu cenu izmaiņām laika gaitā. Mūsu programma ļauj saglabāt cenas, analizēt tās statistiski, kā arī importēt/eksportēt datus uz Excel. Mērķis ir palīdzēt labāk plānot pārtikas budžetu un tādā veidā atvieglot ikdienu.
 
-***Funkcionalitāte***
+### Funkcionalitāte ###
 
 Mūsu programma piedāvā šādas opcijas:
 
@@ -23,7 +24,7 @@ Mūsu programma piedāvā šādas opcijas:
 
 
 
-***Izmantotās datu struktūras un algoritmi***
+### Izmantotās datu struktūras un algoritmi ###
 
 **Datu struktūras:**
 
@@ -44,7 +45,7 @@ Mūsu programma piedāvā šādas opcijas:
 
 
 
-***Izmantotās bliotēkas***
+### Izmantotās bliotēkas ###
 
 •⁠  ⁠json- izmanto datu ielādei un saglabāšanai .json formātā. Tas ļauj viegli pārveidot vārdnīcu uz failu un otrādāk;
 
