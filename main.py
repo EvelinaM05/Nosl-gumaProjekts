@@ -75,6 +75,21 @@ def set_reminder():
         print("Atgādinājums - Pievienojiet produktu cenas ")
     set.every().day.at("18:30").do(reminder)
 
+#Produkta cenu limita uzstādīšana, un cenas paaugstināšanās brīdinājums
+def set_alert(data):
+
+#Eksportē datus uz Excel
+def export_to_excel(data):
+
+#Importē datus no Excel
+def import_from_excel(data):
+
+#Produktu statistika
+def statistic_data(data):
+
+#Cenu tabula
+def price_char(data):
+
 #Main loop
 def main_menu():
     data = load_data()
@@ -98,7 +113,7 @@ def main_menu():
         elif choice == "2":
             view_all(data)
         elif choice == "3":
-            set_price_alert(data)
+            set_alert(data)
         elif choice == "4":
             export_to_excel(data)
         elif choice == "5":
