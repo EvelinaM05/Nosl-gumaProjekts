@@ -4,6 +4,7 @@
 Šī projekta mērķis ir izveidot viegli saprotamu rīku, kas palīdz lietotājam sekot līdzi pārtikas produktu cenu izmaiņām laika gaitā. Mūsu programma ļauj saglabāt cenas, analizēt tās statistiski, kā arī importēt/eksportēt datus uz Excel. Mērķis ir palīdzēt labāk plānot pārtikas budžetu un tādā veidā atvieglot ikdienu.
 
 ***Funkcionalitāte***
+
 Mūsu programma piedāvā šādas opcijas:
 
 •⁠  ⁠Pievienot produkta cenu un datumu;
@@ -21,9 +22,10 @@ Mūsu programma piedāvā šādas opcijas:
 •⁠  ⁠Automātiski atgādināt par datu ievadi katru dienu, kas mūsu gadījumā ir 18:30, bet to var mainīt.
 
 
+
 ***Izmantotās datu struktūras un algoritmi***
 
-### Datu struktūras:
+**Datu struktūras:**
 
 •⁠  ⁠⁠dict⁠- saglabā katru produktu kā atslēgu ar vērtību, tātad sarakstu ar cenas ierakstiem;
 
@@ -32,13 +34,14 @@ Mūsu programma piedāvā šādas opcijas:
 •⁠  ⁠Ieraksti- ir vārdnīcas ar ⁠price ⁠un ⁠date ⁠laukiem.
 
 
-### Algoritmi:
+**Algoritmi:**
 
 •⁠  ⁠Meklēšana- tiek izmantota lineāra pārbaude pēc produkta nosaukuma. Šis algoritms parādās piemēram: set_alert() ;
 
 •⁠  ⁠Šķirošana- cenu grafiki tiek balstīti uz datumu šķirošanas algoritmiem. Šis ir redzams piemēram: price_chart() ;
 
 •⁠  ⁠Statistikas aprēķins- ⁠ min() ⁠, ⁠ max() ⁠, ⁠ sum() ⁠ un ⁠ len() ⁠ funkcijas. Šis ir redzams statistics() .
+
 
 
 ***Izmantotās bliotēkas***
