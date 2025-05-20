@@ -77,9 +77,39 @@ def set_reminder():
 
 #Produkta cenu limita uzstādīšana, un cenas paaugstināšanās brīdinājums
 def set_alert(data):
+    product = input("Produkta nosaukums: ").strip().lower()
+    try:
+        limit = float(input("Cenu limits (€): "))
+    except ValueError:
+        print("Nepareiza cena!")
+        return
+
+    if product in data and data[product]:
+        latest_price = data[product][-1]["price"]
+        if latest_price > limit:
+            print(f"{product.title()} cena ({latest_price}€) pārsniedz {limit}€")
+        else:
+            print(f"{product.title()} cena ({latest_price}€) ir zem {limit}€")
+    else:
+        print("Produkts nav atrasts vai tam nav cenu ierakstu!")
 
 #Eksportē datus uz Excel
 def export_to_excel(data):
+    entries = []
+    for product, product_data in data.items():
+        for record in product_data:
+            entries.append({
+                "Produkts": product.title(),
+                "Cena (€)": record["price"],
+                "Datums": record["date"]
+            })
+
+    if entries:
+        df = pd.DataFrame(entries)
+        df.to_excel("products.xlsx", index=False)
+        print("Dati eksportēti uz 'products.xlsx'.")
+    else:
+        print("Nav datu, ko eksportēt.")
 
 #Importē datus no Excel
 def import_from_excel(data):
@@ -113,6 +143,22 @@ def statistics(data):
 
 #Cenu tabula
 def price_char(data):
+    product = input("Produkta nosaukums: ").strip().lower()
+    if product in data and data[product]:
+        entries = sorted(data[product], key=lambda x: x["date"])
+        dates = [e["date"] for e in entries]
+        prices = [e["price"] for e in entries]
+
+        plt.plot(dates, prices, marker='o')
+        plt.title(f"{product.title()} cenu izmaiņas")
+        plt.xlabel("Datums")
+        plt.ylabel("Cena (€)")
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.grid(True)
+        plt.show()
+    else:
+        print("Produkts nav atrasts vai nav ierakstu!")
 
 #Main loop
 def main_menu():
